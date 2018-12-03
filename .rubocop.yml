@@ -1,0 +1,130 @@
+inherit_from:
+  # - .rubocop_todo.yml
+  - enabled.yml
+  - disabled.yml
+
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - 'db/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+
+Metrics/BlockNesting:
+  Max: 3
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 40
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/**/*.rake'
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 100
+
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes.
+# URISchemes: http, https
+Metrics/LineLength:
+  Max: 120
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 40
+
+Metrics/ModuleLength:
+  CountComments: false
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'support/**/*'
+    - 'tmp/**/*'
+
+Naming/AccessorMethodName:
+  Exclude:
+    - 'app/controllers/**/*'
+
+Layout/AlignHash:
+  EnforcedLastArgumentHashStyle: always_ignore
+
+Layout/AlignParameters:
+  Exclude:
+    - 'bin/*'
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/ExtraSpacing:
+  AllowForAlignment: true
+
+# Naming/FileName:
+#   Exclude:
+#   - 'config/initializers/0-extentions.rb'
+#   - 'config/initializers/1-constants.rb'
+#   - 'support/scrape-paypal.rb'
+
+Style/FormatString:
+  EnforcedStyle: percent
+
+# Style/ModuleFunction:
+#   Exclude:
+#     - 'lib/spark_pr.rb'
+#     - 'support/*.rb'
+#     - 'app/models/service/certification_application_board.rb'
+#     - 'app/models/value/login_generator.rb'
+
+Style/Next:
+  EnforcedStyle: skip_modifier_ifs
+  MinBodyLength: 5
+
+# Style/NumericPredicate:
+#   Exclude:
+#     - 'lib/spark_pr.rb'
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '[]'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': ()
+    '%w': '[]'
+    '%W': '[]'
+    '%x': ()
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  # Space between { and |. Overrides EnforcedStyle if there is a conflict.
+  SpaceBeforeBlockParameters: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+

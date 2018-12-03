@@ -1,0 +1,2 @@
+ruby ./day_prep.rb
+at -f ./day_prep_at_midnight midnight

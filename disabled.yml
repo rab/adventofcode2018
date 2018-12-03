@@ -1,0 +1,441 @@
+---
+Rails/OutputSafety:
+  Enabled: false
+Rails/Present:
+  Enabled: false
+Rails/Blank:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Lint/RescueWithoutErrorClass:
+  Enabled: false
+
+Lint/UnneededSplatExpansion:
+  Enabled: false
+
+# Offense count: 174
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+
+# Offense count: 26
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoreEmptyBlocks.
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+# Offense count: 59
+# Cop supports --auto-correct.
+# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+  Max: 25
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+  Max: 10
+
+Performance/Casecmp:
+  Enabled: false
+
+Performance/UnfreezeString:
+  Enabled: false
+
+# Offense count: 132
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: strict, flexible
+Rails/Date:
+  Enabled: false
+
+# Offense count: 70
+# Configuration parameters: Include.
+# Include: app/**/*.rb, config/**/*.rb, db/**/*.rb, lib/**/*.rb
+Rails/Output:
+  Enabled: false
+
+# Offense count: 65
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: strict, flexible
+Rails/TimeZone:
+  Enabled: false
+
+# Offense count: 37
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/Validation:
+  Enabled: false
+
+Layout/BlockEndNewline:
+  Enabled: false
+
+# Offense count: 10
+# Cop supports --auto-correct.
+# Configuration parameters: IndentWhenRelativeTo, SupportedStyles, IndentOneStep, IndentationWidth.
+# SupportedStyles: case, end
+Layout/CaseIndentation:
+  Enabled: false
+
+Layout/CommentIndentation:
+  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: leading, trailing
+Layout/DotPosition:
+  Enabled: false
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+
+# Offense count: 272
+# Cop supports --auto-correct.
+# Configuration parameters: AllowAdjacentOneLineDefs.
+Layout/EmptyLineBetweenDefs:
+  Enabled: false
+
+# Offense count: 22
+# Cop supports --auto-correct.
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: false
+
+# Offense count: 94
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: empty_lines, no_empty_lines
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+# Offense count: 186
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: empty_lines, no_empty_lines
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  Enabled: false
+
+# Offense count: 41
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: empty_lines, no_empty_lines
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+# Offense count: 280
+# Cop supports --auto-correct.
+# Configuration parameters: AllowForAlignment, ForceEqualSignAlignment.
+Layout/ExtraSpacing:
+  Enabled: false
+
+# Offense count: 36
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
+# SupportedStyles: special_inside_parentheses, consistent, align_brackets
+Layout/IndentArray:
+  Enabled: false
+
+# Offense count: 99
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
+# SupportedStyles: special_inside_parentheses, consistent, align_braces
+Layout/IndentHash:
+  Enabled: false
+
+# Offense count: 43
+# Cop supports --auto-correct.
+Layout/LeadingCommentSpace:
+  Enabled: false
+
+Layout/MultilineArrayBraceLayout:
+  Enabled: false
+  EnforcedStyle: symmetrical
+
+# Offense count: 68
+# Cop supports --auto-correct.
+Layout/MultilineBlockLayout:
+  Enabled: false
+
+Layout/MultilineHashBraceLayout:
+  Enabled: false
+  EnforcedStyle: symmetrical
+
+# Offense count: 28
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
+# SupportedStyles: aligned, indented
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+# Offense count: 36
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
+# SupportedStyles: aligned, indented
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+
+# Offense count: 319
+# Cop supports --auto-correct.
+Layout/SpaceAfterComma:          # really want a way to allow Array(something)[-1,1]
+  Enabled: false
+
+# Offense count: 53
+# Cop supports --auto-correct.
+Layout/SpaceAfterNot:
+  Enabled: false
+
+# Offense count: 120
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleInsidePipes, SupportedStyles.
+# SupportedStyles: space, no_space
+Layout/SpaceAroundBlockParameters:
+  Enabled: false
+
+# Offense count: 87
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: space, no_space
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+Layout/SpaceAroundOperators:
+  AllowForAlignment: true
+  Enabled: false
+
+# Offense count: 270
+# Cop supports --auto-correct.
+Layout/SpaceBeforeSemicolon:
+  Enabled: false
+
+# Offense count: 384
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
+# SupportedStyles: space, no_space
+Layout/SpaceInsideBlockBraces:
+  Enabled: false
+
+# Offense count: 456
+# Cop supports --auto-correct.
+Layout/SpaceInsideBrackets:
+  Enabled: false
+
+# Offense count: 51
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
+# SupportedStyles: space, no_space
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+# Offense count: 54
+# Cop supports --auto-correct.
+Layout/SpaceInsideParens:
+  Enabled: false
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+# Offense count: 63
+# Configuration parameters: NamePrefix, NamePrefixBlacklist, NameWhitelist.
+# NamePrefix: is_, has_, have_
+# NamePrefixBlacklist: is_, has_, have_
+# NameWhitelist: is_a?
+Naming/PredicateName:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+
+Style/AsciiComments:
+  Enabled: false
+
+# Offense count: 158
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, ProceduralMethods, FunctionalMethods, IgnoredMethods.
+# SupportedStyles: line_count_based, semantic, braces_for_chaining
+# ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
+# FunctionalMethods: let, let!, subject, watch
+# IgnoredMethods: lambda, proc, it
+Style/BlockDelimiters:
+  Enabled: false
+
+# Offense count: 213
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: braces, no_braces, context_dependent
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+# Offense count: 20
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: nested, compact
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/CommandLiteral:
+  Enabled: false
+
+# Offense count: 44
+# Cop supports --auto-correct.
+# Configuration parameters: Keywords.
+# Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW
+Style/CommentAnnotation:
+  Enabled: false
+
+# Offense count: 20
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
+# SupportedStyles: assign_to_condition, assign_inside_condition
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# Offense count: 29
+# Configuration parameters: MinBodyLength.
+Style/GuardClause:
+  Enabled: false
+
+# Offense count: 571
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
+# SupportedStyles: ruby19, ruby19_no_mixed_keys, hash_rockets
+Style/HashSyntax:
+  Enabled: false
+
+# Offense count: 29
+# Cop supports --auto-correct.
+# Configuration parameters: MaxLineLength.
+Style/IfUnlessModifier:
+  Enabled: false
+
+# Offense count: 76
+# Cop supports --auto-correct.
+Style/Lambda:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Style/NestedTernaryOperator:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+# Offense count: 99
+# Cop supports --auto-correct.
+# Configuration parameters: PreferredDelimiters.
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+# Offense count: 1705
+# Cop supports --auto-correct.
+Style/RedundantSelf:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/Semicolon:
+  Enabled: false
+
+# Offense count: 310
+# Cop supports --auto-correct.
+# Configuration parameters: AllowIfMethodIsEmpty.
+Style/SingleLineMethods:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: semantic
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+  # EnforcedStyle: single_quotes
+  ConsistentQuotesInMultiline: true
+
+Style/SymbolArray:
+  Enabled: false
+
+# Offense count: 92
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoredMethods.
+# IgnoredMethods: respond_to
+Style/SymbolProc:
+  Enabled: false
+
+# Offense count: 135
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
+# SupportedStyles: comma, consistent_comma, no_comma
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+# Offense count: 143
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
+# SupportedStyles: comma, consistent_comma, no_comma
+Style/TrailingCommaInLiteral:
+  Enabled: false
+
+# Offense count: 38
+# Cop supports --auto-correct.
+Style/UnneededInterpolation:
+  Enabled: false
+
+# Offense count: 46
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles, MinSize, WordRegex.
+# SupportedStyles: percent, brackets
+Style/WordArray:
+  Enabled: false
+
+Style/YodaCondition:
+  Enabled: false
