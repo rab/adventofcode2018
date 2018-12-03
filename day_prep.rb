@@ -23,7 +23,7 @@ unless File.exist? filename
   if File.exist?(html = filename.sub(/\.rb\z/,'.html'))
     doc = Nokogiri::HTML File.read(html)
   else
-    uri = URI('http://adventofcode.com/%d/day/%d'%[year, day])
+    uri = URI('https://adventofcode.com/%d/day/%d'%[year, day])
     req = Net::HTTP::Get.new(uri)
     req['Cookie'] = File.read('./.session') if File.exist?('./.session')
     res = Net::HTTP.start(uri.hostname, uri.port) {|http|
