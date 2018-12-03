@@ -9,7 +9,7 @@
 
 require 'date'
 require 'uri'
-require 'net/http'
+require 'net/https'
 
 module Input
   extend self
@@ -21,7 +21,7 @@ module Input
       uri = URI('https://adventofcode.com/%d/day/%s/input'%[year, day.to_s])
       req = Net::HTTP::Get.new(uri)
       req['Cookie'] = File.read('./.session') if File.exist?('./.session')
-      res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+      res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) {|http|
         http.request(req)
       }
       res.body.tap {|contents| File.write(cache_file, contents) }

@@ -12,7 +12,7 @@
 #
 require 'date'
 require 'uri'
-require 'net/http'
+require 'net/https'
 require 'nokogiri'
 require_relative 'input'
 
@@ -26,7 +26,7 @@ unless File.exist? filename
     uri = URI('https://adventofcode.com/%d/day/%d'%[year, day])
     req = Net::HTTP::Get.new(uri)
     req['Cookie'] = File.read('./.session') if File.exist?('./.session')
-    res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+    res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) {|http|
       http.request(req)
     }
     doc = Nokogiri::HTML res.body.tap {|contents| File.write(html, contents) }
