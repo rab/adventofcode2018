@@ -10,11 +10,15 @@ There are a few files that help with the mechanics of the challenge itself. The 
 * My solutions for the 2016 installment of the Advent of Code is in the repo: [rab/adventofcode2016](https://github.com/rab/adventofcode2016)
 * My solutions for the 2017 installment of the Advent of Code is in the repo: [rab/adventofcode2017](https://github.com/rab/adventofcode2017)
 
-My Personal [Leaderboard] stats:
+My Personal [Leaderboard] stats: (didn't even get started this year until day 3)
 
 <pre>
-      --------Part 1--------   -------Part 2--------
-Day       Time   Rank  Score       Time  Rank  Score
+      --------Part 1--------   --------Part 2--------
+Day       Time   Rank  Score       Time   Rank  Score
+  4   13:57:15   9348      0   14:08:41   8816      0
+  3       >24h  19977      0       >24h  18783      0
+  2       >24h  29204      0       >24h  26007      0
+  1       >24h  44285      0       >24h  35289      0
 </pre>
 
 Here are some of the participants using Ruby from the [Cincinnati Ruby Brigade] or who I noticed on the [Leaderboard]:
