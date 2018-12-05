@@ -12,9 +12,6 @@ Lint/AmbiguousBlockAssociation:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-Lint/RescueWithoutErrorClass:
-  Enabled: false
-
 Lint/UnneededSplatExpansion:
   Enabled: false
 
@@ -229,10 +226,10 @@ Layout/SpaceBeforeSemicolon:
 Layout/SpaceInsideBlockBraces:
   Enabled: false
 
-# Offense count: 456
-# Cop supports --auto-correct.
-Layout/SpaceInsideBrackets:
-  Enabled: false
+# # Offense count: 456
+# # Cop supports --auto-correct.
+# Layout/SpaceInsideBrackets:
+#   Enabled: false
 
 # Offense count: 51
 # Cop supports --auto-correct.
@@ -374,6 +371,10 @@ Style/RedundantSelf:
 Style/RegexpLiteral:
   Enabled: false
 
+# was Lint/RescueWithoutErrorClass
+Style/RescueStandardError:
+  Enabled: false
+
 Style/SafeNavigation:
   Enabled: false
 
@@ -411,19 +412,22 @@ Style/SymbolArray:
 Style/SymbolProc:
   Enabled: false
 
-# Offense count: 135
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
-# SupportedStyles: comma, consistent_comma, no_comma
-Style/TrailingCommaInArguments:
-  Enabled: false
+# # Offense count: 135
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
+# # SupportedStyles: comma, consistent_comma, no_comma
+# Style/TrailingCommaInArguments:
+#   Enabled: false
 
-# Offense count: 143
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
-# SupportedStyles: comma, consistent_comma, no_comma
-Style/TrailingCommaInLiteral:
-  Enabled: false
+# # Offense count: 143
+# # Cop supports --auto-correct.
+# # Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
+# # SupportedStyles: comma, consistent_comma, no_comma
+# Style/TrailingCommaInArrayLiteral:
+#   Enabled: false
+
+# Style/TrailingCommaInHashLiteral:
+#   Enabled: false
 
 # Offense count: 38
 # Cop supports --auto-correct.
