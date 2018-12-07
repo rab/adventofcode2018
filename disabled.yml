@@ -257,6 +257,9 @@ Naming/HeredocDelimiterNaming:
 Naming/PredicateName:
   Enabled: false
 
+Naming/UncommunicativeMethodParamName:
+  Enabled: false
+
 Naming/VariableNumber:
   Enabled: false
 
