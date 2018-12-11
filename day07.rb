@@ -199,16 +199,23 @@ puts "Part 1 Ordered:", ordered.join
 # complete all of the steps?
 
 clock = 0
+
 class Worker
+  attr_accessor :job, :completes_at
+
   def initialize
     @job = nil
     @completes_at = nil
   end
 
   def assign(job, time)
-    fail if @job
+puts "assigning #{job} at #{time}"
+    if @job && time < @completes_at
+      fail "#{@job} completes_at #{@completes_at}, but #{job} assigned at #{time}"
+    end
+
     @job = job
-    @completes_at = time + 61 + (job - 'A')
+    @completes_at = time + 61 + (job.ord - 'A'.ord)
   end
 
   def available?(time)
@@ -219,23 +226,46 @@ class Worker
     @completes_at == time && @job
   end
 
+  def idle!
+    @job = nil
+    @completes_at = nil
+  end
 end
 
 workers = Array.new(5) { Worker.new }
-
-queue = graph.startable
+queue = graph.startable         # contains all the startable jobs
+completed = []
 puts "Start:", queue.join
 
-ordered = []
-until queue.empty?
-  node = queue.shift
-  children = graph.edges.select {|e| e.from == node}.map(&:to).uniq
-  puts "#{ordered.join} « #{node} « #{queue.join} (#{children.join})"
-  ordered << node
-  graph.startable(ordered).each do |child|
-    next if ordered.include? child
+until queue.empty? && completed.count == graph.nodes.count
+  while (done = workers.detect {|w| w.finishing?(clock) })
+    completed << done.job unless completed.include?(done.job)
 
-    queue << child unless queue.include? child
+    graph.startable(completed).each do |child|
+      next if completed.include? child # already done
+      next if workers.any?{|w| w.job == child} # already in progress
+      queue << child unless queue.include? child # ready to start
+    end
+    queue = queue.sort
+
+    puts "[#{clock}] #{workers.map {|w| w.job || '.'}.join}  #{completed.join} « Ready:#{queue.join}"
+
+    done.idle!
   end
-  queue = queue.sort
+
+  free = workers.detect {|w| w.available?(clock) }
+
+  unless free
+    clock = workers.map(&:completes_at).min
+    next
+  end
+
+  if (node = queue.shift)
+    free.assign(node, clock)
+    next
+  else
+    clock += 1
+  end
 end
+
+puts "Part 2:", "#{clock-1} seconds"
