@@ -1,0 +1,128 @@
+digraph model {
+  graph [overlap=scale, nodesep=0.5, ranksep=0.5, separation=0.25]
+  node  [shape=plaintext]
+A -> N
+
+P -> O
+
+A -> J
+O -> J
+
+O -> W
+J -> W
+
+E -> I
+N -> I
+W -> I
+
+E -> S
+J -> S
+I -> S
+
+J -> Z
+W -> Z
+
+I -> C
+Z -> C
+
+Z -> D
+
+Z -> F
+
+M -> U
+J -> U
+Z -> U
+
+W -> K
+I -> K
+S -> K
+C -> K
+F -> K
+U -> K
+
+J -> B
+S -> B
+U -> B
+K -> B
+
+A -> X
+E -> X
+M -> X
+I -> X
+F -> X
+
+W -> Q
+I -> Q
+S -> Q
+C -> Q
+F -> Q
+U -> Q
+X -> Q
+
+# AEMNPOJWISZCDFUKBXQTHVLGRY
+
+A -> T
+N -> T
+O -> T
+C -> T
+D -> T
+U -> T
+K -> T
+B -> T
+Q -> T
+
+E -> H
+N -> H
+C -> H
+F -> H
+K -> H
+Q -> H
+T -> H
+
+W -> V
+I -> V
+F -> V
+K -> V
+X -> V
+T -> V
+
+D -> L
+O -> L
+Q -> L
+T -> L
+U -> L
+V -> L
+
+C -> G
+D -> G
+F -> G
+H -> G
+L -> G
+M -> G
+Q -> G
+S -> G
+T -> G
+V -> G
+W -> G
+
+B -> R
+G -> R
+H -> R
+L -> R
+P -> R
+Q -> R
+U -> R
+V -> R
+
+P -> Y
+J -> Y
+I -> Y
+D -> Y
+K -> Y
+B -> Y
+X -> Y
+H -> Y
+V -> Y
+G -> Y
+R -> Y
+}
